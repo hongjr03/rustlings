@@ -32,6 +32,7 @@ fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
         // TODO: Insert new fruits if they are not already present in the
         // basket. Note that you are not allowed to put any type of fruit that's
         // already present!
+        basket.entry(fruit).or_insert(1); // .entry() 函数返回一个 Entry 枚举，它代表了 HashMap 中的一个键值对。or_insert() 方法在 Entry 中不存在时插入一个新值。
     }
 }
 
